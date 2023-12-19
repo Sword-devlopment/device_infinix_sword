@@ -11,14 +11,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit from Infinix-X698 device
-$(call inherit-product, device/infinix/Infinix-X698/device.mk)
+# Inherit from sword device
+$(call inherit-product, device/infinix/sword/device.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := Infinix-X698
-PRODUCT_NAME := lineage_Infinix-X698
+PRODUCT_DEVICE := sword
+PRODUCT_NAME := lineage_sword
 PRODUCT_BRAND := Infinix
-PRODUCT_MODEL := Infinix X698
+PRODUCT_MODEL := Note 11S
 PRODUCT_MANUFACTURER := infinix
 
 # Build info

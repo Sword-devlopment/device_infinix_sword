@@ -1,4 +1,4 @@
-# Android device tree for Infinix Infinix X698 (Infinix-X698)
+# Android device tree for Infinix Note 11S (sword)
 
 ```
 #

@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/Infinix-X698
+DEVICE_PATH := device/infinix/sword
 
 # A/B
 AB_OTA_UPDATER := true
@@ -39,7 +39,7 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 BOARD_HAVE_BLUETOOTH := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := Infinix-X698
+TARGET_BOOTLOADER_BOARD_NAME := CY-X698-H812-H
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -65,7 +65,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x07c08000
 BOARD_KERNEL_TAGS_OFFSET := 0x0bc08000
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_CONFIG := Infinix-X698_defconfig
+TARGET_KERNEL_CONFIG := sword_defconfig
 TARGET_KERNEL_SOURCE := $(DEVICE_PATH)/prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
 
@@ -95,7 +95,7 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := X698,sword
+TARGET_OTA_ASSERT_DEVICE := sword
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.emmc
@@ -116,4 +116,4 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Inherit the proprietary files
-include vendor/infinix/Infinix-X698/BoardConfigVendor.mk
+include vendor/infinix/sword/BoardConfigVendor.mk
