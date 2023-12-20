@@ -63,6 +63,13 @@ PRODUCT_PACKAGES += \
     libfmjni \
     FMRadio
 
+# Init
+PRODUCT_PACKAGES += \
+    init.mt6781.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.mt6781.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.mt6781.rc
+
 # Product characteristics
 PRODUCT_CHARACTERISTICS := default
 
