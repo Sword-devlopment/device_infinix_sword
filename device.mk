@@ -63,6 +63,36 @@ PRODUCT_PACKAGES += \
     libfmjni \
     FMRadio
 
+# Keylayout    
+$(DEVICE_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
+    $(DEVICE_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
+
+# Apn Config
+$(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+
+# Permission 
+PRODUCT_COPY_FILES += \
+  $(DEVICE_PATH)/configs/permissions/privapp-permissions-imsinit.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-imsinit.xml \
+  $(DEVICE_PATH)/configs/permissions/com.mediatek.wfo.legacy.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.mediatek.wfo.legacy.xml \
+  $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-mediatek.xml
+
+# IMS
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common
+
+PRODUCT_PACKAGES += \
+    ImsServiceBase \
+    ImsInit
+    
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/public.libraries-trustonic.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-trustonic.txt
+
 # Init
 PRODUCT_PACKAGES += \
     init.mt6781.rc
