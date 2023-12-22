@@ -71,7 +71,9 @@ $(DEVICE_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/key
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/apn/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
-
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.mediatek
 
 # Permission 
 PRODUCT_COPY_FILES += \
