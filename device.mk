@@ -39,10 +39,25 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1600
+TARGET_SCREEN_WIDTH := 720
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
+
+# Boot Control HAL
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-mtkimpl.recovery \
+    android.hardware.boot@1.1-mtkimpl
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctrl.mt6781
 
 # Health
 PRODUCT_PACKAGES += \
@@ -63,7 +78,7 @@ PRODUCT_PACKAGES += \
     libfmjni \
     FMRadio
 
-# Keylayout    
+# Keylayout   
 $(DEVICE_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
     $(DEVICE_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
 
