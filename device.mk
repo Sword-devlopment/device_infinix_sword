@@ -158,6 +158,10 @@ PRODUCT_COPY_FILES += \
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Power/Perf configs
+PRODUCT_COPY_FILES += \
+    $(foreach file,$(wildcard $(LOCAL_PATH)/config/perf/*), \
+        $(file):$(addprefix $(TARGET_COPY_OUT_VENDOR)/etc/, $(notdir $(file))) )
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
