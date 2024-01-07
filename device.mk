@@ -158,6 +158,11 @@ PRODUCT_COPY_FILES += \
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0_system \
+    android.hidl.manager@1.0_system
+
 # Power/Perf configs
 PRODUCT_COPY_FILES += \
     $(foreach file,$(wildcard $(LOCAL_PATH)/config/perf/*), \
